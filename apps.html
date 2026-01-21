@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>POKEPEDIA</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image" href="https://i.pinimg.com/1200x/3a/6b/bc/3a6bbc84a841a889356e1f0d6ee5ba4e.jpg">
+</head>
+<body>
+
+
+<header class="header">
+    <h3>POKEPEDIA</h3>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <nav class="nav-links" id="navMenu">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="apps.html">APPS</a>
+    </nav>
+</header>
+
+
+<main class="page-container">
+    <div class="app-promo">
+        <div class="app-text">
+            <h1>Pokepedia Mobile App!!</h1>
+            <p>
+                Take Pokepedia with you anywhere you go.
+                Discover Pokémon, abilities, and stats directly on your phone.
+            </p>
+            <ul>
+                <li>Mobile-friendly design</li>
+                <li>Fast Pokémon search</li>
+                <li>Interactive Pokémon cards</li>
+            </ul>
+
+            <div class="store-buttons">
+                <button class="store google">Google Play</button>
+                <button class="store apple">App Store</button>
+            </div>
+        </div>
+
+        <div class="long-pokemon-card">
+            <div class="card-header">
+                <img
+                        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png"
+                        alt="Charizard"
+                />
+                <h2>Charizard</h2>
+                <span class="type fire">Fire</span>
+                <span class="type flying">Flying</span>
+            </div>
+
+            <div class="card-section">
+                <h3>Stats</h3>
+                <p><strong>Height:</strong> 1.7 m</p>
+                <p><strong>Weight:</strong> 90.5 kg</p>
+            </div>
+
+            <div class="card-section">
+                <h3>Abilities</h3>
+                <div class="abilities fire">
+                    <span class="ability-tag">Blaze</span>
+                    <span class="ability-tag">Solar Power</span>
+                </div>
+            </div>
+
+            <div class="card-section">
+                <h3>Description</h3>
+                <p>
+                    Charizard flies around the sky in search of powerful opponents.
+                    It breathes fire of such great heat that it melts anything.
+                </p>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<script src="data.js"></script>
+
+</body>
+</html>

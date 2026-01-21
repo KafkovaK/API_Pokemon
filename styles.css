@@ -1,0 +1,460 @@
+body {
+    font-family: "Times New Roman", serif;
+    background-image: url('https://i.pinimg.com/1200x/d9/34/9e/d9349eaeb6e1f6d67dc2ff7570684bcb.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    -webkit-backdrop-filter: brightness(50%);
+    backdrop-filter: brightness(70%);
+    margin: 0;
+    color: white;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+header a:hover {
+    background-color: cadetblue;
+    color: white;
+    border-radius: 12px;
+}
+
+header a.active {
+    background-color: cadetblue;
+    color: white;
+}
+
+.logo {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    white-space: nowrap;
+}
+
+.nav-links {
+    display: flex;
+    gap: 10px;
+    margin-left: auto;
+    transition: 0.3s;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 20px;
+}
+
+
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 2rem 2rem 2rem;
+    width: 100%;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+.pokemon {
+    background: white;
+    border-radius: 12px;
+    padding: 1rem;
+    width: 160px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+    position: relative;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.pokemon.active {
+    transform: scale(1.2);
+    z-index: 100;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    background-color: white;
+    border: 2px solid darkslategray;
+    height: auto;
+    min-height: 220px;
+}
+
+.pokemon:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.pokemon img {
+    width: 96px;
+    height: 96px;
+    object-fit: contain;
+}
+
+.pokemon h2 {
+    font-size: 1rem;
+    text-transform: capitalize;
+}
+
+
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 400px;
+}
+
+.hidden {
+    display: none;
+}
+
+.close {
+    font-size: 1.5rem;
+    cursor: pointer;
+    float: right;
+}
+
+
+
+.extra-info {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid white;
+    color: black;
+    font-size: 0.9rem;
+    text-transform: capitalize;
+    width: 100%;
+    text-align: left;
+    border-top: 1px solid white;
+}
+
+.extra-info p {
+    margin: 5px 0;
+}
+
+
+
+.ability-tag {
+    display: inline-block;
+    color: white;
+    padding: 2px 8px;
+    margin: 3px;
+    border: 1px solid;
+    border-radius: 10px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.abilities.fire .ability-tag {
+    background: darkorange;
+    border-color: darkorange;
+}
+
+.abilities.water .ability-tag {
+    background: cornflowerblue;
+    border-color: cornflowerblue;
+}
+
+.abilities.grass .ability-tag {
+    background: limegreen;
+    border-color: limegreen;
+}
+
+.abilities.bug .ability-tag {
+    background: green;
+    border-color: green;
+}
+
+.abilities.electric .ability-tag {
+    background: gold;
+    border-color: gold;
+}
+
+.abilities.psychic .ability-tag {
+    background: lightcoral;
+    border-color: lightcoral;
+}
+
+.abilities.ice .ability-tag {
+    background: lightblue;
+    border-color: lightblue;
+}
+
+.abilities.dark .ability-tag {
+    background: teal;
+    border-color: teal;
+}
+
+.abilities.dragon .ability-tag {
+    background: mediumslateblue;
+    border-color: mediumslateblue;
+}
+
+.abilities.fairy .ability-tag {
+    background: lightpink;
+    border-color: lightpink;
+}
+
+.abilities.ground .ability-tag {
+    background: darkgoldenrod;
+    border-color: darkgoldenrod;
+}
+
+.abilities.poison .ability-tag {
+    background: maroon;
+    border-color: maroon;
+}
+
+.abilities.normal .ability-tag {
+    background: salmon;
+    border-color: salmon;
+}
+
+.abilities.fighting .ability-tag {
+    background: steelblue;
+    border-color: steelblue;
+}
+
+.abilities.flying .ability-tag {
+    background: mediumpurple;
+    border-color: mediumpurple;
+}
+
+.details-box {
+    margin-top: 15px;
+    text-align: left;
+    color: black;
+}
+
+
+
+.filters {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: left;
+    margin-bottom: 30px;
+    margin-left: 90px;
+}
+
+.filters label {
+    font-size: 1.1rem;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 10px;
+    background: darkslategray;
+}
+
+.filters select {
+    font-size: 1rem;
+    padding: 6px 10px;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+}
+
+
+
+.page-container {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    font-family: "Times New Roman", serif;
+}
+
+.white-box {
+    background: white;
+    color: black;
+    padding: 30px;
+    border-radius: 16px;
+    max-width: 700px;
+    width: 100%;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.white-box h1 {
+    margin-bottom: 15px;
+}
+
+
+
+.app-promo {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.app-text {
+    max-width: 400px;
+    background: white;
+    color: black;
+    padding: 30px;
+    border-radius: 16px;
+    width: 100%;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.app-card {
+    background: white;
+    color: black;
+    border-radius: 16px;
+    padding: 20px;
+    width: 220px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    max-width: 700px;
+}
+
+.app-card img {
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.filters input {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+}
+
+.store-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.store {
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.store.google {
+    background: greenyellow;
+}
+
+.store.apple {
+    background: black;
+    color: white;
+}
+
+.long-pokemon-card {
+    background: white;
+    color: black;
+    width: 280px;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    font-family: "Times New Roman", serif;
+}
+
+.card-header {
+    text-align: center;
+}
+
+.card-header img {
+    width: 140px;
+    height: 140px;
+}
+
+.card-header h2 {
+    margin: 10px 0;
+    text-transform: capitalize;
+}
+
+.type {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-weight: bold;
+    margin: 3px;
+    color: white;
+    font-size: 0.85rem;
+}
+
+.type.fire {
+    background: darkorange;
+}
+
+.type.flying {
+    background: mediumpurple;
+}
+
+.card-section {
+    margin-top: 15px;
+    border-top: 1px solid grey;
+    padding-top: 10px;
+}
+
+.card-section h3 {
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+.abilities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: rgba(0,0,0,0.9);
+        flex-direction: column;
+        width: 200px;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 15px;
+        border-bottom: 1px solid dimgray;
+    }
+
+    .store-buttons {
+        justify-content: center;
+    }
+}
